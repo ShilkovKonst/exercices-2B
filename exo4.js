@@ -21,7 +21,7 @@ function trouverArobas() {
     function ifArobas() {
         if (text.innerText.match(/@/g) == null || text.innerText.match(/@/g).length > 1)
             return false;
-        else return true;;
+        else return true;
     }
     let result_2 = document.getElementById('result_2');
     if (!ifArobas())
@@ -32,7 +32,7 @@ function trouverArobas() {
 
 function trouverChiffres() {
     function ifChiffres() {
-        if (text.innerText.match(/[0-9]/) != null)
+        if (text.innerText.match(/\d/) != null)
             return true;
         else
             return false;
@@ -47,8 +47,8 @@ function trouverChiffres() {
 function remplacerChiffres() {
     let result_4 = document.getElementById('result_4');
     let subtext = text.innerText;
-    if (subtext.match(/[0-9]/) != null)
-        subtext = subtext.replace(/[0-9]/g, '*');
+    if (subtext.match(/\d/) != null)
+        subtext = subtext.replace(/\d/g, '*');
     else {
         result_4.innerText = "Il n'y a pas de chiffres";
         return;

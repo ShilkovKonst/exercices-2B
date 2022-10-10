@@ -7,9 +7,14 @@ function changeStyle() {
     titre_test.style.textIndent = 5 + 'px';
 }
 function changeClass() {
-    titre_test.setAttribute('class', 'active');
+    if (titre_test.getAttribute('class') != null && !titre_test.classList.contains('active'))
+        titre_test.classList.add('active');
+    else 
+        titre_test.setAttribute('class', 'active');
 }
 function removeStyleAndClass() {
-    titre_test.removeAttribute('style');
-    titre_test.removeAttribute('class');
+    if (titre_test.getAttribute('class') != null && titre_test.classList.contains('active'))
+        titre_test.classList.remove('active');
+    else
+        titre_test.removeAttribute('style');
 }

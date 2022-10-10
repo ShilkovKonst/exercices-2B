@@ -24,13 +24,13 @@ function multiTable(n) {
 }
 
 function verifierN() {
-    let nombre = parseInt(prompt('Ecrivez un nombre entier.'));
+    let nombre = prompt('Ecrivez un nombre entier.');
     if (!isNaN(nombre)) {
         multiTable(nombre);
     }
     else {
-        while (isNaN(nombre))
-            nombre = parseInt(prompt("Ce n'est pas un nombre entier. Réesayer!"));
+        while (isNaN(nombre) || nombre%1!=0)
+            nombre = prompt("Ce n'est pas un nombre entier. Réesayer!");
         multiTable(nombre);
     }
 }
@@ -45,7 +45,7 @@ function autoMultiTable1_10() {
             p.setAttribute('class', 'header')
             th.appendChild(p);
             tr.appendChild(th);
-            for (let j = 1; j < 10; j++) {
+            for (let j = 1; j <= 10; j++) {
                 let td = document.createElement("td");
                 let p = document.createElement("p");
                 p.innerText = i * j;

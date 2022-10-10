@@ -10,32 +10,23 @@ function updateChrono() {
         let interval = setInterval(function change() {
             timer_start = true;
             if (!timer_stop) {
-                if (ms < 900) {
-                    ms = ms + 100;
-                    msecond.innerText = ms;
+                ms += 100;
+                if (ms == 1000) {
+                    ms=0;
+                    s++;                    
                 }
-                else {
-                    ms = 0;
-                    msecond.innerText = ms;
-                    s++;
-                    if (s < 60) {
-                        second.innerText = s;
-                    }
-                    else {
-                        s = 0;
-                        second.innerText = s;
-                        m++;
-                        if (m < 60) {
-                            minute.innerText = m;
-                        }
-                        else {
-                            m = 0;
-                            minute.innerText = m;
-                            h++;
-                            hour.innerText = h;
-                        }
-                    }
-                }
+                if (s==60){
+                    s = 0;
+                    m++;
+                }    
+                if (m == 60){
+                        m = 0;
+                        h++;
+                }                
+                msecond.innerText = ms;
+                second.innerText = s;
+                minute.innerText = m;
+                hour.innerText = h;
             }
             else {
                 clearInterval(interval);
@@ -52,6 +43,7 @@ function stop() {
     timer_stop = true;
 }
 function reset() {
+    timer_stop=true;
     ms = s = m = h = 0;
     msecond.innerText = ms;
     second.innerText = s;
