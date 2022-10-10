@@ -9,7 +9,7 @@ function multiTable(n) {
     p.setAttribute('class', 'header');
     th.appendChild(p);
     tr.appendChild(th);
-    for (let j = 1; j < 10; j++) {
+    for (let j = 1; j <= 10; j++) {
         {
             let td = document.createElement("td");
             let p = document.createElement("p");
@@ -25,7 +25,9 @@ function multiTable(n) {
 
 function verifierN() {
     let nombre = prompt('Ecrivez un nombre entier.');
-    if (!isNaN(nombre)) {
+    if (!isNaN(nombre) && nombre % 1 == 0) {
+        while (nombre.charAt(0).match('0') != null)
+            nombre = nombre.replace('0', '');
         multiTable(nombre);
     }
     else {
