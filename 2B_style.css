@@ -1,0 +1,112 @@
+body {
+    width: 400px;
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+}
+
+form {
+    border: solid thin;
+    display: flex;
+    flex-direction: column;
+}
+
+.label_range {
+    display: flex;
+}
+
+.range_legend {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-around;
+    border: solid thin;
+}
+
+label {
+    margin: 0;
+    height: 30px;
+    width: 50%;
+    padding-top: auto;
+    padding-bottom: auto;
+    border: solid thin;
+    align-content: center;
+}
+
+input {
+    margin: 0;
+    padding-left: 0%;
+    height: 30px;
+    width: 60%;
+}
+
+.range_legend>p {
+    margin: auto 0;
+    width: 20%;
+    text-align: center;
+}
+
+label>p {
+    margin: 6px 0;
+    padding: 0;
+    text-indent: 10px;
+}
+
+#titre_test_exo_1 {
+    margin: auto;
+    border: solid thick;
+    width: auto;
+}
+
+.active {
+    color: white;
+    background-color: red;
+    border: dotted 2px black;
+    text-indent: 5px;
+}
+
+#exo_3 {
+    display: flex;
+    flex-direction: column;
+}
+
+#exo_3_bouton {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#chrono {
+    margin: 10px 0;
+    padding: 10px;
+    text-align: justify;
+    width: auto;
+    border: solid thin;
+}
+
+#exo_3_bouton>button {
+    color: antiquewhite;
+    background-color: deepskyblue;
+    border: transparent;
+    border-radius: 10px;
+    width: 100px;
+}
+
+table {
+    border: double thick;
+}
+
+.header {
+    border: double thin;
+}
+
+.body {
+    border: solid thin;
+}
+
+.body,
+.header {
+    width: auto;
+    margin: 0;
+    padding: 2px;
+    text-align: center;
+}

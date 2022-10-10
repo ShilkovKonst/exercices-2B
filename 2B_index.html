@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="2B_style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Exercice 1 -->
+    <div>
+        <h1 id="titre_test_exo_1">Exercice 1</h1>
+        <form>
+            <div class="label_range">
+                <label for="couleur_fond">
+                    <p>Couleur de fond (rgb)</p>
+                </label>
+                <div class="range_legend">
+                    <p>0</p>
+                    <input type="range" id="couleur_fond" name="couleur_fond" min="0" max="255" value="0" step="1">
+                    <p>255</p>
+                </div>
+            </div>
+            <div class="label_range">
+                <label for="padding">
+                    <p>Padding</p>
+                </label>
+                <div class="range_legend">
+                    <p>0</p>
+                    <input type="range" id="padding" name="padding" min="0" max="30" value="0">
+                    <p>30</p>
+                </div>
+            </div>
+            <div class="label_range">
+                <label for="height">
+                    <p>Height</p>
+                </label>
+                <div class="range_legend">
+                    <p>0</p>
+                    <input type="range" id="height" name="height" min="0" max="200" value="0">
+                    <p>200</p>
+                </div>
+            </div>
+            <div class="label_range">
+                <label for="width">
+                    <p>Width</p>
+                </label>
+                <div class="range_legend">
+                    <p>0</p>
+                    <input type="range" id="width" name="width" min="0" max="200" value="0">
+                    <p>200</p>
+                </div>
+            </div>
+            <div class="label_range">
+                <label for="arrondi">
+                    <p>Arrondi</p>
+                </label>
+                <div class="range_legend">
+                    <p>0</p>
+                    <input type="range" id="arrondi" name="arrondi" min="0" max="30" value="0">
+                    <p>30</p>
+                </div>
+            </div>
+            <div class="label_range">
+                <label for="rotation">
+                    <p>Rotation</p>
+                </label>
+                <div class="range_legend">
+                    <p>0</p>
+                    <input type="range" id="rotation" name="rotation" min="0" max="180" value="0">
+                    <p>180</p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="exo1.js"></script>
+
+    <!-- Exercice 2 -->
+    <div>
+        <h1>Exercice 2</h1>
+        <p id="titre_test_exo_2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sint accusamus qui?
+            Debitis sint explicabo rerum dolore molestias placeat sunt,
+            fuga reprehenderit quae fugit illo optio dolorum nisi repellendus ipsam.
+        </p>
+        <button onclick="changeStyle()">Style changer</button>
+        <button onclick="changeClass()">Class changer</button>
+        <button onclick="removeStyleAndClass()">Reset style</button>
+    </div>
+    <script src="exo2.js"></script>
+
+    <!-- Exercice 3 -->
+    <div id="exo_3">
+        <h1>Exercice 3</h1>
+        <div>
+            <p id="chrono">
+                <span class="resetable" id="hour">0</span> h :
+                <span class="resetable" id="minute">0</span> m :
+                <span class="resetable" id="second">0</span> s :
+                <span class="resetable" id="millisecond">0</span> ms
+            </p>
+            <div id="exo_3_bouton">
+                <button onclick="start()">Start</button>
+                <button onclick="stop()">Stop</button>
+                <button onclick="reset()">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="exo3.js"></script>
+
+    <!-- Exercice 4 -->
+    <h1>Exercice 4</h1>
+    <div>
+        <button onclick="initExo4()">Si vous voulez un autre exemple</button>
+        <p id="user_phrase">A1@123456789</p>
+        <button onclick="majMinAD()">Eprouver maj/min</button>
+        <p id="result_1"></p>
+        <button onclick="trouverArobas()">Eprouver @</button>
+        <p id="result_2"></p>
+        <button onclick="trouverChiffres()">Eprouver chiffres</button>
+        <p id="result_3"></p>
+        <button onclick="remplacerChiffres()">Remplacer les chiffres par *</button>
+        <p id="result_4"></p>
+    </div>
+    <script src="exo4.js"></script>
+
+    <!-- Exercice 5 -->
+    <h1>Exercice 5</h1>
+    <button onclick="ajouterNom()">Ajouter un nom</button>
+    <p id="tableau_noms"></p>
+    <button onclick="tirageSort()">Tirage au sort</button>
+    <p>On a le nom gagnant!<span id="nom_gagnant"></span></p>
+    <script src="exo5.js"></script>
+
+    <!-- Exercice 6 -->
+    <h1>Exercice 6</h1>
+    <div id="exo6">
+        <button onclick="verifierN()">Ecrivez un nombre entier</button>
+        <button onclick="autoMultiTable1_10()">Appuyez pour voir la table de multiplication des nombres 1-10</button>
+        <button onclick="resetToNull()">Réinitialiser l'exercice 6</button>
+        <table id="table">
+            <caption>
+                <h2>Table de multiplication</h2>
+            </caption>
+            <tbody id="tbody">
+                <tr id="theader">
+                    <th>
+                        <p class="header">\</p>
+                    </th>
+                    <th>
+                        <p class="header">1</p>
+                    </th>
+                    <th>
+                        <p class="header">2</p>
+                    </th>
+                    <th>
+                        <p class="header">3</p>
+                    </th>
+                    <th>
+                        <p class="header">4</p>
+                    </th>
+                    <th>
+                        <p class="header">5</p>
+                    </th>
+                    <th>
+                        <p class="header">6</p>
+                    </th>
+                    <th>
+                        <p class="header">7</p>
+                    </th>
+                    <th>
+                        <p class="header">8</p>
+                    </th>
+                    <th>
+                        <p class="header">9</p>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="exo6.js"></script>
+</body>
+
+</html>
