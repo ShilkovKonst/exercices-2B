@@ -9,7 +9,7 @@ function changeStyle() {
 function changeClass() {
     if (titre_test.getAttribute('class') != null && !titre_test.classList.contains('active'))
         titre_test.classList.add('active');
-    else 
+    else
         titre_test.setAttribute('class', 'active');
 }
 function removeStyleAndClass() {

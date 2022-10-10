@@ -29,7 +29,7 @@ function verifierN() {
         multiTable(nombre);
     }
     else {
-        while (isNaN(nombre) || nombre%1!=0)
+        while (isNaN(nombre) || nombre % 1 != 0)
             nombre = prompt("Ce n'est pas un nombre entier. Réesayer!");
         multiTable(nombre);
     }

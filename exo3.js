@@ -12,17 +12,17 @@ function updateChrono() {
             if (!timer_stop) {
                 ms += 100;
                 if (ms == 1000) {
-                    ms=0;
-                    s++;                    
+                    ms = 0;
+                    s++;
                 }
-                if (s==60){
+                if (s == 60) {
                     s = 0;
                     m++;
-                }    
-                if (m == 60){
-                        m = 0;
-                        h++;
-                }                
+                }
+                if (m == 60) {
+                    m = 0;
+                    h++;
+                }
                 msecond.innerText = ms;
                 second.innerText = s;
                 minute.innerText = m;
@@ -43,7 +43,7 @@ function stop() {
     timer_stop = true;
 }
 function reset() {
-    timer_stop=true;
+    timer_stop = true;
     ms = s = m = h = 0;
     msecond.innerText = ms;
     second.innerText = s;
